@@ -1,5 +1,9 @@
 require "g/version"
 
 module G
-  # Your code goes here...
+	module Command
+		def self.run(command, args)
+			p command, args, "-----"
+		end
+	end
 end
