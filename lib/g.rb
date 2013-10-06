@@ -5,7 +5,11 @@ require "theguardian"
 module G
 	module Command
 		def self.run(command, args)
-			G::Commands::Headline.list(args)
+			if command == "headlines"
+				G::Commands::Headline.list(args)
+			else
+				raise Exception.new("Invalide command")
+			end
 		end
 	end
 end
@@ -24,7 +28,7 @@ module G
 					page: params[:page],
 					per_page: params[:per_page]
 				}
-				
+
 				items = Theguardian::ContentApi.search(search_params).items
 				items.each { |item| self.pretify(item) }
 			end

@@ -15,11 +15,11 @@ OptionParser.new do |opts|
     options[:verbose] = v
   end
 
-  opts.on("-p", "--irs [DecimalInteger]", OptionParser::DecimalInteger, "Page") do |page|
+  opts.on("-p", "--page [DecimalInteger]", OptionParser::DecimalInteger, "Page") do |page|
     options[:page] = page
   end
 
-  opts.on("--per", "--irs [DecimalInteger]", OptionParser::DecimalInteger, "Per page") do |per_page|
+  opts.on("--per", "[DecimalInteger]", OptionParser::DecimalInteger, "Per page") do |per_page|
     options[:per_page] = per_page
   end
 
@@ -27,12 +27,12 @@ OptionParser.new do |opts|
     options[:q] = query.first
   end
 
-  opts.on("-f", "--time [TIME]", Time, "Articles from date") do |from|
-    options[:date] = { from: from }
+  opts.on("-f", "--from [TIME]", Time, "Articles from date") do |from|
+    options[:from] = from
   end
 
-  opts.on("-t", "--time [TIME]", Time, "Articles to date") do |to|
-    options[:date] = { to: from }
+  opts.on("-t", "--to [TIME]", Time, "Articles to date") do |to|
+    options[:to] = to
   end
 
   opts.on_tail("-h", "--help", "Show this message") do
