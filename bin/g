@@ -3,10 +3,45 @@
 lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
 $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 
-require 'g'
+require "g"
+require "optparse"
+require "optparse/time"
 
 args = ARGV.dup
+
+options = {}
+OptionParser.new do |opts|
+  opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+
+  opts.on("-p", "--irs [DecimalInteger]", OptionParser::DecimalInteger, "Page") do |page|
+    options[:page] = page
+  end
+
+  opts.on("--per", "--irs [DecimalInteger]", OptionParser::DecimalInteger, "Per page") do |per_page|
+    options[:per_page] = per_page
+  end
+
+  opts.on("-q x,y,z", Array, "Search query") do |query|
+    options[:q] = query.first
+  end
+
+  opts.on("-f", "--time [TIME]", Time, "Articles from date") do |from|
+    options[:date] = { from: from }
+  end
+
+  opts.on("-t", "--time [TIME]", Time, "Articles to date") do |to|
+    options[:date] = { to: from }
+  end
+
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+    exit
+  end
+end.parse!(ARGV)
+
 ARGV.clear
 command = args.shift.strip rescue 'help'
 
-G::Command.run(command, args)
+G::Command.run(command, options)
