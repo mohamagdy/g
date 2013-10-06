@@ -20,10 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-`g headlines`
-`g headlines --per 20 # 20 headlines per page`
-`g headlines -f 1-10-2013 # Headlines from 1st Oct till now`
-`g -h # Help`
+```ruby
+g headlines
+g headlines --per 20 # 20 headlines per page
+g headlines -f 1-10-2013 # Headlines from 1st Oct till now
+g -h # Help
+````
 
 ## Contributing
 
