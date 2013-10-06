@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'g/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "g"
+  spec.name          = "thegurdian-console"
   spec.version       = G::VERSION
   spec.authors       = ["Mohamed Magdy"]
   spec.email         = ["eng.mohamagdy@gmail.com"]
@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
 
   # Dependencies
   spec.add_dependency("theguardian")
+  spec.add_dependency("table_print")
 
   # Dependencies
   spec.add_development_dependency "bundler", "~> 1.3"

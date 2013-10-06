@@ -1,7 +1,7 @@
 require "g/version"
 require "theguardian"
+require 'table_print'
 
-# Gem files
 module G
 	module Command
 		def self.run(command, args)
@@ -30,7 +30,11 @@ module G
 				}
 
 				items = Theguardian::ContentApi.search(search_params).items
-				items.each { |item| self.pretify(item) }
+				items.each do |item| 
+					item.pub_date = Time.parse(item.webPublicationDate).strftime("%Y-%m-%d %H:%M")
+					item.headline = item.fields.headline
+					tp(item, :pub_date, :headline, :webUrl) 
+				end
 			end
 
 			def self.pretify(item)
