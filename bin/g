@@ -19,7 +19,7 @@ OptionParser.new do |opts|
     options[:page] = page
   end
 
-  opts.on("--per", "[DecimalInteger]", OptionParser::DecimalInteger, "Per page") do |per_page|
+  opts.on("--per", "--per [DecimalInteger]", OptionParser::DecimalInteger, "Per page") do |per_page|
     options[:per_page] = per_page
   end
 
