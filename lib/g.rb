@@ -1,6 +1,7 @@
 require "g/version"
 require "theguardian"
 require 'table_print'
+require 'terminal-table'
 
 module G
 	module Command
@@ -30,11 +31,19 @@ module G
 				}
 
 				items = Theguardian::ContentApi.search(search_params).items
-				items.each do |item| 
-					item.pub_date = Time.parse(item.webPublicationDate).strftime("%Y-%m-%d %H:%M")
-					item.headline = item.fields.headline
-					tp(item, :pub_date, :headline, :webUrl) 
+				
+				table = Terminal::Table.new(headings: ["Date", "Headline", "Url"]) do |t|
+					items.each do |item| 
+						item.pub_date = Time.parse(item.webPublicationDate).strftime("%Y-%m-%d %H:%M")
+						item.headline = item.fields.headline.scan(/.{#{40}}|.+/).map { |x| x.strip }.join("-\n")
+						item.webUrl = item.webUrl.scan(/.{#{60}}|.+/).map { |x| x.strip }.join("\n")
+
+						t << [item.pub_date, item.headline, item.webUrl]
+						t << :separator
+					end
 				end
+
+				puts table
 			end
 
 			def self.pretify(item)
