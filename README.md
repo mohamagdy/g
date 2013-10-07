@@ -2,8 +2,6 @@
 
 Access TheGuardian headlines in the console
 
-TODO: Fix the gem name. There is a typo :-(
-
 ## Installation
 
 Add this line to your application's Gemfile:
