@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'g/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "thegurdian-console"
+  spec.name          = "theguardian-console"
   spec.version       = G::VERSION
   spec.authors       = ["Mohamed Magdy"]
   spec.email         = ["eng.mohamagdy@gmail.com"]
