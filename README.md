@@ -28,40 +28,33 @@ g -h # Help
 ## Sample Output
 
 ```ruby
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| Date             | Headline                                  | Url                                                          |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:20 | Tony Abbott clashes with senators over W- | http://www.theguardian.com/world/2013/oct/07/tony-abbott-wes |
-|                  | est Papua comments                        | t-papua-comments                                             |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:19 | Football transfer rumours: Zakaria Bakka- | http://www.theguardian.com/football/2013/oct/07/football-tra |
-|                  | li to Manchester United?                  | nsfer-rumours-zakaria-bakkali                                |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:12 | US debt ceiling deadlock worries markets- | http://www.theguardian.com/business/2013/oct/07/us-debt-ceil |
-|                  | - live                                    | ing-deadlock-worries-markets-live                            |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:02 | Government and Labour reshuffle: Politic- | http://www.theguardian.com/politics/2013/oct/07/government-a |
-|                  | s live blog                               | nd-labour-reshuffle-politics-live-blog                       |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:00 | Is Buddhism a religion?                   | http://www.theguardian.com/commentisfree/belief/2013/oct/07/ |
-|                  |                                           | is-buddhism-a-religion                                       |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:00 | Boy: Tales of Childhood by Roald Dahl --  | http://www.theguardian.com/childrens-books-site/2013/oct/07/ |
-|                  | review                                    | review-roald-dahl-boy-tales-of-childhood                     |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 08:00 | Should housing associations be able to s- | http://www.theguardian.com/housing-network/poll/2013/oct/07/ |
-|                  | et their own rent prices?                 | housing-associations-independent-rent-levels-orr             |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 07:56 | Today in healthcare: Monday 7 October     | http://www.theguardian.com/healthcare-network/2013/oct/07/to |
-|                  |                                           | day-in-healthcare-monday-7-october                           |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 07:51 | BBC Radio 1 to launch iPlayer video chan- | http://www.theguardian.com/media/2013/oct/07/bbc-radio-1-ipl |
-|                  | nel                                       | ayer-video-channel                                           |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-| 2013-10-07 07:50 | Binyamin Netanyahu riles Iranians with f- | http://www.theguardian.com/world/2013/oct/07/binyamin-netany |
-|                  | ashion faux pas over jeans                | ahu-iranians-jeans                                           |
-+------------------+-------------------------------------------+--------------------------------------------------------------+
-+------------------+-------------------------------------------+--------------------------------------------------------------+
++------------------+---------------------------------------------------------------+-----------------------+
+| Date             | Headline                                                      | Url                   |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:43 | Benedict Cumberbatch's portrayal of Julian Assange wins PM's- | http://gu.com/p/3jc28 |
+|                  | praise                                                        |                       |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:35 | Modern politics: show business for ugly people                | http://gu.com/p/3jcxm |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:19 | Australian food in season: eating off the land in October     | http://gu.com/p/3j9qv |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:19 | Paul Barry answers your questions – live Q&A                  | http://gu.com/p/3jc24 |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:13 | Warm weather hits September clothing sales                    | http://gu.com/p/3jc26 |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:06 | Campaign against fossil fuels growing, says study             | http://gu.com/p/3jc25 |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:06 | Kolo Touré: The Gallery                                       | http://gu.com/p/3jamt |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:05 | The Joy of Six: remarkable solo performances                  | http://gu.com/p/3jb78 |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:05 | SNP demands debate with Philip Hammond after job loss claims  | http://gu.com/p/3jcxy |
++------------------+---------------------------------------------------------------+-----------------------+
+| 2013-10-07 23:05 | Ravel Morrison's talent show suggests his troubles are final- | http://gu.com/p/3jbq9 |
+|                  | ly over                                                       |                       |
++------------------+---------------------------------------------------------------+-----------------------+
++------------------+---------------------------------------------------------------+-----------------------+
+
 ```
 
 ## Contributing
