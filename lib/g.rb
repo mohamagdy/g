@@ -21,7 +21,7 @@ module G
 			def self.list(params = {})
 				search_params = { 
 					q: params[:q],
-					fields: ["headline"], 
+					fields: ["headline", "shortUrl"], 
 					date: { 
 						from: params[:from] || Time.now, 
 						to: params[:to] || Time.now 
@@ -35,8 +35,8 @@ module G
 				table = Terminal::Table.new(headings: ["Date", "Headline", "Url"]) do |t|
 					items.each do |item| 
 						item.pub_date = Time.parse(item.webPublicationDate).strftime("%Y-%m-%d %H:%M")
-						item.headline = item.fields.headline.scan(/.{#{40}}|.+/).map { |x| x.strip }.join("-\n")
-						item.webUrl = item.webUrl.scan(/.{#{60}}|.+/).map { |x| x.strip }.join("\n")
+						item.headline = item.fields.headline.scan(/.{#{60}}|.+/).map { |x| x.strip }.join("-\n")
+						item.webUrl = item.fields.shortUrl
 
 						t << [item.pub_date, item.headline, item.webUrl]
 						t << :separator
